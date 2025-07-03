@@ -3,8 +3,7 @@ import Profile from './Profile'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 import "../App.css"
-import Certificate from './Certificate'
-import Resume from './Resume'
+
 
 const Home = ({show,setShow,darkmode,bgcolor ,cross,setCross,handleclick,handleremove}) => {
 

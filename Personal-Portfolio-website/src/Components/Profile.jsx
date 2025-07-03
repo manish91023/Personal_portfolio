@@ -331,7 +331,7 @@ const Profile = ({ show, setShow, darkmode, bgcolor,setCross }) => {
                     bgcolor === "white" ? "text-black" : "text-white"
                   }`}
                 >
-                  28 jul 2003 
+                  28 jul 2022 
                 </h1>
               </div>
             </div>

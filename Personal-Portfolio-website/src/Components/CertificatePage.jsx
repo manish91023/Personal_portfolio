@@ -2,9 +2,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import "../Components/Global.css";
-import certificate1 from "../Components/SocialLinks/e commerce ss.png"
-import project2 from "../Components/SocialLinks/portfolio project ss.png"
-import project3 from "../Components/SocialLinks/text analyzer ss.png"
 
 
 const CertificatePage = ({bgcolor,darkmode}) => {
@@ -13,14 +10,15 @@ const CertificatePage = ({bgcolor,darkmode}) => {
    const [loading, setLoading] = useState(true);
  
    useEffect(() => {
-     fetch('http://localhost:3000/certificate/get')
+   
+     fetch(`${import.meta.env.VITE_BACKEND_URL}/certificate/get`)
        .then(response => {
          if (!response.ok) throw new Error('Network response was not ok');
          return response.json();
        })
        .then(data => {
          setCertificates(data.certificate);
-         console.log(data)
+        
          setLoading(false);
        })
        .catch(error => {

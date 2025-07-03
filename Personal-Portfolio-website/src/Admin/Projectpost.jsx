@@ -56,7 +56,7 @@ const Projectpost = () => {
       category:category, 
     };
     try {
-      const res = await axios.post("http://localhost:3000/project/post", data, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}project/post`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

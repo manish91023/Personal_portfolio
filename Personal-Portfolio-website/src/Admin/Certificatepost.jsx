@@ -44,7 +44,7 @@ const Certificatepost = () => {
         description:description
     }
     try {
-      const res=await axios.post("http://localhost:3000/certificate/post",data,{
+      const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/certificate/post`,data,{
           headers:{
               "Content-Type":"multipart/form-data"
           }
