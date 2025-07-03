@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 import cors from "cors"
 const app = express();
 app.use(cors({ 
-    origin:process.env.ACCESS_URL
+    origin:"http://localhost:5173"
 }))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())

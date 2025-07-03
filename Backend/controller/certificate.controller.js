@@ -48,9 +48,9 @@ export const getCertificate=async(req,res)=>{
     
 
     try {
-        const project=await certificateModel.find();
+        const certificate=await certificateModel.find();
         
-        return res.status(200).json({message:"all certificate fetched successfully project",project});
+        return res.status(200).json({message:"all certificate fetched successfully project",certificate});
     } catch (error) {
             return res.status(500).send("Error fetching projects");
     }
