@@ -10,7 +10,7 @@ const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}http://localhost:3000/project/get/ml`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/project/get/ml`)
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
