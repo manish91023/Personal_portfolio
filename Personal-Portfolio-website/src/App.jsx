@@ -85,8 +85,10 @@ function App() {
             {/* <Route
               path="/Resume"
               element={<Resume bgcolor={bgcolor} darkmode={darkmode} />}
-            /> */}
+              /> */}
 
+              <Route path="/admin/project/:adminauth" element={<Projectpost />}></Route>
+              <Route path="/admin/certificate/:adminauth" element={<Certificatepost/>}></Route>
             <Route
               path="/Contact"
               element={<Contact bgcolor={bgcolor} darkmode={darkmode} />}
@@ -120,8 +122,6 @@ function App() {
               element={<Certificate bgcolor={bgcolor} darkmode={darkmode} />}
             />
           </Route>
-          <Route path="/admin/project/:adminauth" element={<Projectpost />}></Route>
-          <Route path="/admin/certificate/:adminauth" element={<Certificatepost/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
