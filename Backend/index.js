@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 import cors from "cors"
 const app = express();
 app.use(cors({ 
-    origin:"https://myportfolio-64a9.onrender.com"
+    origin:"https://manishkportfolio.netlify.app"
 }))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
