@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 import "../Components/Global.css";
-
+import Loader from "./Loader";
 import { Link } from "react-router-dom";
 
 const MLProject = ({bgcolor,darkmode}) => {
   
 const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/project/get/ml`)
@@ -19,10 +20,12 @@ const [projects, setProjects] = useState([]);
         setProjects(data);
         // console.log(data)
         setLoading(false);
+        setError(false)
       })
       .catch(error => {
         console.error('Error fetching data:', error);
         setLoading(false);
+        setError(true)
       });
   }, []);
 
@@ -32,7 +35,12 @@ const [projects, setProjects] = useState([]);
       {/* <div className="p-3"> */}
         <div className={` ${darkmode==="dark" ? `bg-${bgcolor}` : `bg-white`} p-10 rounded-lg`}>
           <h1 className={`text-3xl font-bold ${bgcolor==="white" ? "text-black" :"text-white"}`}>Projects</h1>
-
+          {
+            loading && <Loader/>
+          }
+          {
+            error && <p>Error in loading the project</p>
+          }
           <div className="flex gap-5 flex-wrap my-5">
             {
               projects && projects.length>0 && projects.map((project, index) =>(

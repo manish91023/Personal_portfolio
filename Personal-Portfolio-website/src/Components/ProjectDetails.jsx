@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Components/Global.css";
 import { useLocation, useParams } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 const ProjectDetails = ({ bgcolor, darkmode }) => {
   
   const location = useLocation();
@@ -22,6 +22,9 @@ const ProjectDetails = ({ bgcolor, darkmode }) => {
         <h1 className={`text-3xl font-bold mb-6 ${titleTextClass}`}>Project</h1>
 
         <h1 className={`text-2xl font-bold mb-4 text-center ${titleTextClass} `}>{proj.title}</h1>
+        <div>
+          <Link to={`${proj.live_link}`}>View Live</Link>
+        </div>
 
         <div className="flex justify-center mb-6">
           <img

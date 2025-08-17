@@ -99,6 +99,30 @@ const Profile = ({ show, setShow, darkmode, bgcolor,setCross }) => {
             </div>
           </NavLink>
 
+
+          <NavLink to="/MLProject">
+            <div
+              onClick={handleCross}
+              className="rounded-lg flex items-center p-2"
+              style={{
+                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+              }}
+            >
+              <FaLaptopCode
+                className={`text-xl my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              />
+              <h1
+                className={`text-sm my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              >
+                ML Projects
+              </h1>
+            </div>
+          </NavLink>
+
          
           <NavLink to="/Certify">
             <div
@@ -119,6 +143,29 @@ const Profile = ({ show, setShow, darkmode, bgcolor,setCross }) => {
                 }`}
               >
                 Skills
+              </h1>
+            </div>
+          </NavLink>
+
+          <NavLink to="/certification">
+            <div
+              onClick={handleCross}
+              className="rounded-lg flex items-center p-2"
+              style={{
+                background: `${bgcolor === "white" ? "#f3f6f6" : "#1D1D1D"}`,
+              }}
+            >
+              <FaLaptopCode
+                className={`text-xl my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              />
+              <h1
+                className={`text-sm my-1 ${
+                  bgcolor === "white" ? "text-black" : "text-white"
+                }`}
+              >
+                Certification
               </h1>
             </div>
           </NavLink>
