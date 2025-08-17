@@ -53,7 +53,9 @@ const Certificatepost = () => {
       alert("error in submitting form");
       console.log(error)
     }finally{
+      alert("certificate has successfully been created please refresh the page."); 
       setLoading(false)
+
     }
     
 

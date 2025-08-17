@@ -56,7 +56,7 @@ const Projectpost = () => {
       category:category, 
     };
     try {
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}project/post`, data, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/project/post`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -65,7 +65,10 @@ const Projectpost = () => {
       console.log(error);
       alert("error in uploading project");
     } finally {
+      alert("project uploaded successfully please refresh the page.")
       setLoading(false);
+      
+      
     }
   };
 
